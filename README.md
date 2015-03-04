@@ -1,5 +1,5 @@
-# http-status-singlish
-Well, it's HTTP status messages in Singlish
+# http-status-manglish
+Well, it's HTTP status messages in Manglish
 
 
 ## 1xx Informational
@@ -10,7 +10,7 @@ This class of status code indicates a provisional response, consisting only of t
 
 
 ### 100 Continue
-> Chop, chop!
+> Lek lu
 
 This means that the server has received the request headers, and that the client should proceed to send the request body (in the case of a request for which a body needs to be sent; for example, a POST request). If the request body is large, sending it to a server when a request has already been rejected based upon inappropriate headers is inefficient. To have a server check if the request could be accepted based on the request's headers alone, a client must send Expect: 100-continue as a header in its initial request and check if a 100 Continue status code is received in response before continuing (or receive 417 Expectation Failed and not continue).
 
@@ -20,7 +20,7 @@ This means that the server has received the request headers, and that the client
 This means the requester has asked the server to switch protocols and the server is acknowledging that it will do so.
 
 ### 102 Processing (WebDAV; RFC 2518)
-> Can not see? Busy, lah.
+> 
 
 As a WebDAV request may contain many sub-requests involving file operations, it may take a long time to complete the request. This code indicates that the server has received and is processing the request, but no response is available yet. This prevents the client from timing out and assuming the request was lost.
 
@@ -35,28 +35,30 @@ This class of status codes indicates the action requested by the client was rece
 Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.
 
 ### 201 Created
-> Nah! I make for you!
+> Settle
 
 The request has been fulfilled and resulted in a new resource being created.
 
 ### 202 Accepted
-> Oso can
+> Can loh
 
 The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.
 
 ### 203 Non-Authoritative Information (since HTTP/1.1)
-> I also dunno from where one!
+> Mender nih
 
 The server successfully processed the request, but is returning information that may be from another source.
 
 ### 204 No Content
 The server successfully processed the request, but is not returning any content. Usually used as a response to a successful delete request.
 
+> Roti Kosong
+
 ### 205 Reset Content
 The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.
 
 ### 206 Partial Content
-> And then?
+> On the way!
 
 The server is delivering only part of the resource (byte serving) due to a range header sent by the client. The range header is used by tools like wget to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams.
 
@@ -78,7 +80,7 @@ A user agent may carry out the additional action with no user interaction only i
 
 
 ### 300 Multiple Choices
-> Blur
+> 2B Pencil
 
 Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.
 
@@ -149,7 +151,7 @@ The requested resource could not be found but may be available again in the futu
 A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 
 ### 406 Not Acceptable
-> Not nice sia
+> Takbleh bang
 
 The requested resource is only capable of generating content not acceptable according to the Accept headers sent in the request.
 
@@ -160,7 +162,7 @@ The client must first authenticate itself with the proxy.
 The server timed out waiting for the request. According to HTTP specifications: "The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time."
 
 ### 409 Conflict
-> Jialat!
+> Lawan tetap lawan!
 
 Indicates that the request could not be processed because of conflict in the request, such as an edit conflict in the case of multiple updates.
 
@@ -193,7 +195,7 @@ The client has asked for a portion of the file (byte serving), but the server ca
 The server cannot meet the requirements of the Expect request-header field.
 
 ### 418 I'm a teapot (RFC 2324)
-> Teh-O-kosong
+> Teh-O-Ais-Limau
 
 This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by tea pots requested to brew coffee.
 
@@ -305,7 +307,7 @@ Response status codes beginning with the digit "5" indicate cases in which the s
 
 
 ### 500 Internal Server Error
-> Salah
+> Alamak!
 
 A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
 
